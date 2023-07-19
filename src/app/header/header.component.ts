@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,7 +14,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-
   isAuth(){
     if (localStorage.getItem('user') == null || localStorage.getItem('user') == undefined){
       return false
@@ -14,5 +21,5 @@ export class HeaderComponent {
       return true;
     }
   }
-
 }
+
