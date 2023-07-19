@@ -1,0 +1,67 @@
+<!-- a mettre dans un compossant a part-->
+<!-- Modal Login-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="form" action="">
+                    <label for="user_name">user name</label>
+                    <input class="form-control my-2" type="text" [(ngModel)]="loginInfos.user_name" name="user_name"
+                        id="user_name">
+                    <label for="user_password">password</label>
+                    <input class="form-control my-2" [(ngModel)]="loginInfos.user_password" type="password"
+                        name="user_password" id="user_password">
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" (click)="onLogin()" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- a faire et mettre dans un compossant a part-->
+<!-- Modal Inscription -->
+
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel1">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form class="form" action="">
+                    <label for="user_name">user name</label>
+                    <input class="form-control my-2" type="text" [(ngModel)]="signUpInfos.user_name" name="user_name"
+                        id="user_name1">
+                    <label for="user_password">password</label>
+                    <input class="form-control my-2" [(ngModel)]="signUpInfos.user_password" type="password"
+                        name="user_password" id="user_password1">
+                    <label for="last_name">last name</label>
+                    <input class="form-control my-2" type="text" [(ngModel)]="signUpInfos.last_name" name="last_name"
+                        id="last_name">
+                    <label for="first_name">first name</label>
+                    <input class="form-control my-2" type="text" [(ngModel)]="signUpInfos.first_name" name="first_name"
+                        id="first_name">
+                    <label for="sex">gender :   </label>
+                    <select name="sex" id="sex" [(ngModel)]="signUpInfos.sex">
+                        <option value="0">F</option>
+                        <option value="1">M</option>
+                    </select>
+                    
+
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" (click)="onSignup()" class="btn btn-primary">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
