@@ -1,0 +1,29 @@
+
+
+<div class="col-8 offset-2 mt-3">
+    <table class="table border p-2 ">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Libellé</th>
+            <th scope="col">Solde</th>
+            <th scope="col">Decouvert</th>
+            <th scope="col">Taux</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr *ngFor="let account of accounts">
+            <td> </td>
+            <td>{{ account.libelle }}</td>
+            <td>{{ account.solde }}</td>
+            <td>{{ account.decouvert }}</td>
+            <td>{{ account.taux }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button (click)="getAccounts()">see accounts</button> 
+</div>
+
