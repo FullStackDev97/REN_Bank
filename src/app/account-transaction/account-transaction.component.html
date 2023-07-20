@@ -1,0 +1,26 @@
+<div class="col-8 offset-2 mt-3">
+    <table class="table border p-2 ">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Libellé</th>
+          <th scope="col">Montant</th>
+          <th scope="col">Date</th>
+          <th scope="col">CompteId</th>
+          <th scope="col"></th>
+  
+        </tr>
+      </thead>
+      <tbody  >
+        <tr *ngFor="let transaction of transactions[0] ">
+          <td> {{ transaction.id }} </td>
+          <td>{{ transaction.libelle }}</td>
+          <td>{{ transaction.montant }}</td>
+          <td>{{ transaction.date }}</td>
+          <td>{{ transaction.compteId }}</td>
+        </tr>
+      </tbody>
+
+    </table>
+</div>
+

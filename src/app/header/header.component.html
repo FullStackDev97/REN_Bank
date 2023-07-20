@@ -1,9 +1,20 @@
-
 <header class="sticky-top">
   <nav class="navbar border navbar-expand-lg">
-    <li class="nav-item btn rounded-pill bg-primary mx-3"><a href="" class="nav-link text-light"
-      data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a></li>
-    <li class="nav-item btn rounded-pill bg-success mx-3"><a href="" data-bs-toggle="modal" data-bs-target="#exampleModal1" class="nav-link text-light">Subscribe</a></li>
+
+    <div *ngIf="isAuth()">
+      <li class="nav-item btn rounded-pill bg-primary mx-3" (click)="logOut()"><a href="" class="nav-link text-light">Logout</a></li>
+    </div>
+
+    <div *ngIf="!isAuth()">
+      <li class="nav-item btn rounded-pill bg-primary mx-3"><a href="" class="nav-link text-light"
+          data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+      </li>
+      <li class="nav-item btn rounded-pill bg-success mx-3"><a href="" data-bs-toggle="modal"
+          data-bs-target="#exampleModal1" class="nav-link text-light">Subscribe</a>
+      </li>
+    </div>
+
+
     <div>
       <span class="w-25">
         <img class="w-25" src="https://placehold.co/400" alt="">
@@ -13,4 +24,5 @@
   </nav>
 
 </header>
+
 <app-auth></app-auth>

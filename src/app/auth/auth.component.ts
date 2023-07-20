@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../services/auth_service/auth.service';
 import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-auth',
@@ -17,9 +18,11 @@ export class AuthComponent {
   }
 
 
+
   loginInfos: any = {
     user_name:  '',
     user_password:  ''
+    
   }
 
   constructor(private authService : AuthService, private router: Router ) {
@@ -29,7 +32,10 @@ export class AuthComponent {
   onLogin() {
 
     this.authService.login(this.loginInfos.user_name,this.loginInfos.user_password);
+    
   }
+
+  
 
 
   onSignup() {

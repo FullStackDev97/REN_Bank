@@ -19,6 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { MainMenuComponent } from './mainMenu/mainMenu.component';
 import { AccountListComponent } from './account-list/account-list.component';
+import { AccountTransactionComponent } from './account-transaction/account-transaction.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { AccountListComponent } from './account-list/account-list.component';
     AuthComponent,
     FooterComponent,
     MainMenuComponent,
-    AccountListComponent
+    AccountListComponent,
+    AccountTransactionComponent
   ],
   imports: [
     BrowserModule,

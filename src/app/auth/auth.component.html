@@ -16,7 +16,7 @@
                     <input class="form-control my-2" [(ngModel)]="loginInfos.user_password" type="password"
                         name="user_password" id="user_password">
                     <div class="modal-footer d-flex justify-content-center">
-                        <button type="button" (click)="onLogin()" class="btn btn-primary">Login</button>
+                        <button type="button"  (click)="onLogin()" data-bs-dismiss="modal" class="btn btn-primary">Login</button>
                     </div>
                 </form>
             </div>
@@ -57,7 +57,7 @@
                     
 
                     <div class="modal-footer d-flex justify-content-center">
-                        <button type="button" (click)="onSignup()" class="btn btn-primary">Sign Up</button>
+                        <button type="button"  (click)="onSignup()" data-bs-dismiss="modal" class="btn btn-primary">Sign Up</button>
                     </div>
                 </form>
             </div>
