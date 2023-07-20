@@ -18,6 +18,7 @@ import { AuthComponent } from './auth/auth.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './footer/footer.component';
 import { MainMenuComponent } from './mainMenu/mainMenu.component';
+import { AccountListComponent } from './account-list/account-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MainMenuComponent } from './mainMenu/mainMenu.component';
     HeaderComponent,
     AuthComponent,
     FooterComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    AccountListComponent
   ],
   imports: [
     BrowserModule,
