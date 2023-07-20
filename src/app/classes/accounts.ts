@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 export class Accounts {
+    id : number = 0;
     libelle : string = '';
     solde : number = 0;
     decouvert : number  = 0;
@@ -9,6 +10,18 @@ export class Accounts {
 
     constructor() {
     }
+
+    
+    public getId() : number {
+        return this.id
+    }
+
+    
+    public setId(id : number) {
+        this.id = id;
+    }
+    
+    
 
     
     public getLibelle() : string {

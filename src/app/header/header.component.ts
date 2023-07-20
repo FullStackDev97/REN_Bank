@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 import { Component } from '@angular/core';
 
 @Component({
@@ -15,11 +7,15 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   isAuth(){
-    if (localStorage.getItem('user') == null || localStorage.getItem('user') == undefined){
-      return false
+    if (localStorage.getItem('user') !== null ){
+      return true
     }else{
-      return true;
+      return false;
     }
+  }
+
+  logOut(){
+    localStorage.removeItem('user');
   }
 }
 

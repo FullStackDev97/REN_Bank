@@ -13,8 +13,9 @@ export class AccountListComponent {
 
   }
 
-  getAccounts(){
-    this.accounts = [...this.apiService.getAccounts()] ;
-    //console.log(this.accounts);
+  ngOnInit(): void {
+    this.apiService.getAccounts().subscribe((data) => { this.accounts = data});
   }
+
+
 }
