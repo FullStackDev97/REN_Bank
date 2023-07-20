@@ -1,11 +1,11 @@
 <header class="sticky-top">
   <nav class="navbar border navbar-expand-lg">
 
-    <div *ngIf="isAuth()">
-      <li class="nav-item btn rounded-pill bg-primary mx-3" (click)="logOut()"><a href="" class="nav-link text-light">Logout</a></li>
+    <div *ngIf="checkAuth()">
+      <li class="nav-item btn rounded-pill bg-primary mx-3" (click)="closeSession()"><a href="" class="nav-link text-light">Logout</a></li>
     </div>
 
-    <div *ngIf="!isAuth()">
+    <div *ngIf="!checkAuth()">
       <li class="nav-item btn rounded-pill bg-primary mx-3"><a href="" class="nav-link text-light"
           data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
       </li>
