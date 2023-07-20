@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../services/auth_service/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -6,16 +7,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  isAuth(){
-    if (localStorage.getItem('user') !== null ){
-      return true
-    }else{
-      return false;
-    }
+
+  constructor(private authService : AuthService){
+
+  }
+  checkAuth(){
+    return this.authService.isAuth();
   }
 
-  logOut(){
-    localStorage.removeItem('user');
+  closeSession(){
+    this.authService.logOut();
   }
 }
 

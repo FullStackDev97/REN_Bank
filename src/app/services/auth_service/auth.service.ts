@@ -23,4 +23,18 @@ export class AuthService {
     localStorage.setItem('user',JSON.stringify(this.user) );
   
   }
+
+  isAuth(){
+    if (localStorage.getItem('user') !== null ){
+      return true
+    }else{
+      return false;
+    }
+  }
+
+  logOut(){
+    localStorage.removeItem('user');
+  }
+
+  
 }
