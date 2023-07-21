@@ -17,7 +17,7 @@ export class AuthComponent {
     sex:0,
   }
 
-
+  name_unique = false;
 
   loginInfos: any = {
     user_name:  '',
@@ -39,20 +39,16 @@ export class AuthComponent {
 
 
   onSignup() {
-    console.log(this.signUpInfos.user_name);
+    
 
-    console.log();
+    if(this.name_unique){
+      this.name_unique = false;
+    }else{
+      this.name_unique = true;
+    }
+    
 
-    console.log(this.signUpInfos.user_password);
-
-    console.log(this.signUpInfos.last_name);
-
-    console.log();
-
-    console.log(this.signUpInfos.first_name);
-
-    console.log();
-
-    console.log(this.signUpInfos.sex);
+    return this.name_unique;
+    
   }
 }

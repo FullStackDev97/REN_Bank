@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+
+.main-btn{
+font-family: Roboto, sans-serif;
+font-weight: 0;
+font-size: 14px;
+color: #fff;
+background-color: #3497fd;
+padding: 10px 30px;
+border: solid #3497fd 2px;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 50px;
+transition : 1000ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+
+}
+
+.text-main{
+    color: #3497fd;
+    font-weight: bold;
+    
+}
+
+.bg-main{
+    background-color: #092039;   
+    
+}
+
+.fill-main{
+    fill: #3497fd;
+}
+
+.main-btn:hover{
+
+transition : 1000ms;
+padding: 10px 62px;
+transform : translateY(-0px);
+background-color: #fff;
+color: #0066cc;
+border: solid 2px #0066cc;
+}
+
+
+
+
+.alt-btn{
+
+font-family: Roboto, sans-serif;
+font-weight: 0;
+font-size: 14px;
+color: #0b1c2e;
+background-color: #ffffff;
+padding: 10px 30px;
+border: solid #0b1c2e 2px;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 50px;
+transition : 1000ms;
+transform: translateY(0);
+display: flex;
+flex-direction: row;
+align-items: center;
+cursor: pointer;
+}
+
+.alt-btn:hover{
+
+transition : 1000ms;
+padding: 10px 62px;
+transform : translateY(-0px);
+background-color: #fff;
+color: #3497fd;
+border: solid 2px #3497fd;
+}
+
+
+

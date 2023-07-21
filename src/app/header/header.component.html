@@ -1,26 +1,31 @@
 <header class="sticky-top">
-  <nav class="navbar border navbar-expand-lg">
+  <nav class="navbar border navbar-expand-lg d-xs-flex justify-content-between">
+    <div class="">
+      <span class=" d-flex ms-4" >
+        <a class="w-25" routerLink="/">
+          <img class="w-50 rounded-circle" src="../../assets/REN_Bank.png" alt="">
+        </a>
+        <h1 class="text-center fw-bolder">REN BANK</h1>
+      </span>
+      
+    </div>
 
     <div *ngIf="checkAuth()">
-      <li class="nav-item btn rounded-pill bg-primary mx-3" (click)="closeSession()"><a href="" class="nav-link text-light">Logout</a></li>
+      <li class="nav-item main-btn mx-3" (click)="closeSession()"><a href="" class="nav-link ">Logout</a></li>
     </div>
 
-    <div *ngIf="!checkAuth()">
-      <li class="nav-item btn rounded-pill bg-primary mx-3"><a href="" class="nav-link text-light"
-          data-bs-toggle="modal" data-bs-target="#exampleModal">Login</a>
+    <div class="d-flex" *ngIf="!checkAuth()">
+      <li class="nav-item main-btn mx-3"><a href="" class="nav-link "
+          data-bs-toggle="modal" data-bs-target="#exampleModal">Espace Client</a>
       </li>
-      <li class="nav-item btn rounded-pill bg-success mx-3"><a href="" data-bs-toggle="modal"
-          data-bs-target="#exampleModal1" class="nav-link text-light">Subscribe</a>
+      <li class="nav-item alt-btn mx-3"><a href="" data-bs-toggle="modal"
+          data-bs-target="#exampleModal1" class="nav-link ">Ouvrir un compte</a>
       </li>
     </div>
 
 
-    <div>
-      <span class="w-25">
-        <img class="w-25" src="https://placehold.co/400" alt="">
-      </span>
-    </div>
-    <h1 class="text-center">REN BANK</h1>
+    
+    
   </nav>
 
 </header>
