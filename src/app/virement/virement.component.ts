@@ -22,6 +22,7 @@ export class VirementComponent implements OnInit {
     this.apiService.getAccounts().subscribe(
       (accounts) => {
         this.comptes = accounts;
+        console.log(this.comptes[0])
         // Vous pouvez également trier les comptes selon vos besoins ici
       },
       (error) => {
@@ -32,6 +33,9 @@ export class VirementComponent implements OnInit {
 
   submitVirement() {
     // Vérifier si les comptes émetteur et destinataire sont différents
+    /*console.log("montant = "+this.montant);
+    console.log("compte emetteur = "+this.compteEmetteur);
+    console.log("compte destinataire = "+this.compteDestinataire);*/
     if (this.compteEmetteur === this.compteDestinataire) {
       alert("Les comptes émetteur et destinataire doivent être différents.");
       return;

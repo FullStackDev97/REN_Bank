@@ -24,9 +24,9 @@ export class ApiService {
   makeVirement(unCompteIdSrc: number, unCompteIdDst: number, unMontant: number) {
     const params = new HttpParams()
       .set('unUtilisateurId', this.user.user_id)
-      .set('unCompteIdSrc', unCompteIdSrc.toString())
-      .set('unCompteIdDst', unCompteIdDst.toString())
-      .set('unMontant', unMontant.toString());
+      .set('unCompteIdSrc', unCompteIdSrc)
+      .set('unCompteIdDst', unCompteIdDst)
+      .set('unMontant', unMontant);
 
     return this.http.post<any>(this.baseurl + '/virement', null, { params });
   }
