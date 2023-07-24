@@ -1,13 +1,20 @@
-<div class="d-flex justify-content-center">
-      
-  <div *ngIf="this.authService.isAuth()" class="card text-bg-primary mb-3" style="max-width: 30rem;">
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item"> <a routerLink="/accounts"> Liste de vos comptes</a></li> <!--routerLink à setup-->
-      <li class="list-group-item"> <a routerLink="/accounts"> Virements</a></li>  <!--routerLink à setup -->
-    </ul>
+  <div *ngIf="this.authService.isAuth()" class="d-flex justify-content-center">
+    <div class="card text-bg-primary mb-3" style="width: 100vh; margin-top: 4rem">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" style="height: 20vh;" > 
+          <div class="card-body">
+            <h5 class="card-title">Liste de vos comptes</h5>
+            <p class="card-text">Retrouvez tout vos comptes bancaire listée.</p>
+            <a routerLink="/accounts" class="btn btn-primary">Accéder à mes comptes bancaires</a>
+          </div>
+        </li>
+        <li class="list-group-item" style="height: 20vh"> 
+          <div class="card-body">
+            <h5 class="card-title">Virements</h5>
+            <p class="card-text">Envie d'envoyer de l'argent à William ? C'est par ici !</p>
+            <a routerLink="/accounts" class="btn btn-primary">Faire un virement</a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
-
- 
-  
- 
-</div>

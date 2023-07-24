@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -20,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MainMenuComponent } from './mainMenu/mainMenu.component';
 import { AccountListComponent } from './account-list/account-list.component';
 import { AccountTransactionComponent } from './account-transaction/account-transaction.component';
+import { ValidatedPaymentComponent } from './validatedPayment/validatedPayment.component';
 
 
 @NgModule({
@@ -30,7 +22,8 @@ import { AccountTransactionComponent } from './account-transaction/account-trans
     FooterComponent,
     MainMenuComponent,
     AccountListComponent,
-    AccountTransactionComponent
+    AccountTransactionComponent,
+    ValidatedPaymentComponent
   ],
   imports: [
     BrowserModule,
