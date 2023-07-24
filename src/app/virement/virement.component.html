@@ -1,0 +1,23 @@
+<div class="container mt-5">
+    <h2>Bienvenue sur le site REN BANK</h2>
+    <form (submit)="submitVirement()" class="mt-4">
+      <div class="form-group">
+        <label>Comptes émetteurs</label>
+        <select class="form-control" [(ngModel)]="compteEmetteur">
+          <option *ngFor="let compte of comptes" [value]="compte.id">{{ compte.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Comptes destinataires</label>
+        <select class="form-control" [(ngModel)]="compteDestinataire">
+          <option *ngFor="let compte of comptes" [value]="compte.id">{{ compte.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Montant du virement</label>
+        <input type="number" class="form-control" [(ngModel)]="montant" name="montant" />
+      </div>
+      <button type="submit" class="btn btn-primary">Valider</button>
+    </form>
+  </div>
+  
