@@ -2,15 +2,15 @@
   <div *ngIf="this.authService.isAuth()" class="d-flex justify-content-center">
     <div class="card text-bg-primary mb-3" style="width: 100vh; margin-top: 4rem">
       <ul class="list-group list-group-flush">
-        <li class="list-group-item" style="height: 20vh;" > 
+        <li class="list-group-item"  > 
           <div class="card-body">
             <h5 class="card-title">Gestion de vos comptes</h5>
             <p class="card-text">Retrouver tout vos comptes bancaire listés.</p>
             <a routerLink="/accounts" class="main-btn d-flex justify-content-center w-50">Accéder à mes comptes</a>
           </div>
         </li>
-        <li class="list-group-item" style="height: 20vh"> 
-          <div class="card-body">
+        <li class="list-group-item"> 
+          <div class="card-body p-4">
             <h5 class="card-title">Virements</h5>
             <p class="card-text">Envoyer de l'argent rapidement et en tout sécurité.</p>
             <a routerLink="/virement" class="main-btn d-flex justify-content-center w-50">Faire un virement</a>
