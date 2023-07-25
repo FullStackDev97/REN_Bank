@@ -45,7 +45,7 @@ export class ApiService {
     .set('inNumeroCompte', nb_compte)
     .set('user_id',this.user.user_id)
 
-    return this.http.post(this.baseurl +"/compteHistorique",null ,{ params });
+    return this.http.post<any>(this.baseurl +"/compteHistorique",null ,{ params });
       
   }
 }
