@@ -13,6 +13,7 @@ import { AccountListComponent } from './account-list/account-list.component';
 import { AccountTransactionComponent } from './account-transaction/account-transaction.component';
 import { ValidatedPaymentComponent } from './validatedPayment/validatedPayment.component';
 import { HomeComponent } from './home/home.component';
+import { VirementComponent } from './virement/virement.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { HomeComponent } from './home/home.component';
     AccountListComponent,
     AccountTransactionComponent,
     ValidatedPaymentComponent,
-    HomeComponent
+    HomeComponent,
+    VirementComponent
   ],
   imports: [
     BrowserModule,
