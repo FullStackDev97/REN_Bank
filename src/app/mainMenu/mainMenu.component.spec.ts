@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MainMenuComponent } from './mainMenu.component';
 
-describe('FooterBankComponent', () => {
+describe('MainMenuComponent', () => {
   let component: MainMenuComponent;
   let fixture: ComponentFixture<MainMenuComponent>;
 

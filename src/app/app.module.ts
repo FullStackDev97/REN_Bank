@@ -11,7 +11,10 @@ import { FooterComponent } from './footer/footer.component';
 import { MainMenuComponent } from './mainMenu/mainMenu.component';
 import { AccountListComponent } from './account-list/account-list.component';
 import { AccountTransactionComponent } from './account-transaction/account-transaction.component';
+import { ValidatedPaymentComponent } from './validatedPayment/validatedPayment.component';
+import { HomeComponent } from './home/home.component';
 import { VirementComponent } from './virement/virement.component';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import { VirementComponent } from './virement/virement.component';
     MainMenuComponent,
     AccountListComponent,
     AccountTransactionComponent,
+    ValidatedPaymentComponent,
+    HomeComponent,
     VirementComponent
   ],
   imports: [

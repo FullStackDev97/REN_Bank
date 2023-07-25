@@ -32,6 +32,7 @@ export class AuthComponent {
   onLogin() {
 
     this.authService.login(this.loginInfos.user_name,this.loginInfos.user_password);
+    this.router.navigate(['/menu'])
     
   }
 

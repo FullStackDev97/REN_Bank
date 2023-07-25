@@ -19,4 +19,3 @@ export class HeaderComponent {
     this.authService.logOut();
   }
 }
-
