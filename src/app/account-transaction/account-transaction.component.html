@@ -1,11 +1,18 @@
 <div class="p-5 d-flex justify-content-center">
   <form class=" p-3 border col-8 " action="">
-    <div class="form-group mb-4  d-flex justify-content-between">
-      <input class=" col" type="date" name="from" id="from ">
-      <input class=" col" type="date" name="to" id="to ">
+    <div class="form-group mb-4  d-flex justify-content-evenly">
+      <label for="from">A partir de :</label>
+      <input class=" w-25" type="date" [(ngModel)]="from" name="from" id="from ">
+      <label for="to">Jusqu'à :</label>
+      <input class=" w-25" type="date" name="to" [(ngModel)]="to" id="to ">
     </div>
+    <select name="type" id="type" [(ngModel)]="typeOp">
+      <option value="" selected>--</option>
+      <option value="debit">Debit</option>
+      <option value="credit">Credit</option>
+    </select>
     <div class="d-flex justify-content-center">
-      <button class="main-btn">Filtrer</button>
+      <button class="main-btn" (click)="filterTransacs()">Filtrer</button>
     </div>
     
 
@@ -13,7 +20,7 @@
 </div>
 
 <div class="col-8 offset-2 mt-3">
-  <table class="table border p-2 ">
+  <table *ngIf="showed_transactions.length >0" class="table border p-2 ">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -25,8 +32,8 @@
 
       </tr>
     </thead>
-    <tbody>
-      <tr *ngFor="let transaction of transactions[0] ">
+    <tbody >
+      <tr *ngFor="let transaction of showed_transactions ">
         <td> {{ transaction.id }} </td>
         <td>{{ transaction.libelle }}</td>
         <td>{{ transaction.montant }}</td>
@@ -35,9 +42,13 @@
       </tr>
     </tbody>
 
-  </table>
+   
 
+  </table>
+  <p class="text-center m-3 fw-bold" *ngIf="showed_transactions.length == 0" > Aucune Transactions ne correspond à vos critères</p>
+  
   <div class="d-flex justify-content-around">
     <button class="main-btn" routerLink="/accounts"> &#11164; liste des comptes</button>
+    <button class="alt-btn" (click)="resetTransactions()">Réinitialiser les filtres</button>
   </div>
 </div>
