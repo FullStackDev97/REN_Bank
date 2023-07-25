@@ -7,12 +7,13 @@ import { AccountTransactionComponent } from './account-transaction/account-trans
 import { AuthGardService } from './auth-gard.service';
 import { HomeComponent } from './home/home.component';
 import { VirementComponent } from './virement/virement.component';
+import { ValidatedPaymentComponent } from './validatedPayment/validatedPayment.component';
 
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'menu',component:MainMenuComponent,canActivate:[AuthGardService]},
-  {path:'virementGood',component:MainMenuComponent,canActivate:[AuthGardService]},
+  {path:'virementGood',component:ValidatedPaymentComponent,canActivate:[AuthGardService]},
   {path:'accounts',component:AccountListComponent ,canActivate:[AuthGardService]},
   {path:'virement',component:VirementComponent ,canActivate:[AuthGardService]},
   {path:'accountTransaction/:account_id',component:AccountTransactionComponent,canActivate:[AuthGardService]}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api_service/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-virement',
@@ -12,7 +13,7 @@ export class VirementComponent implements OnInit {
   compteDestinataire: number = 0;
   montant: number = 0;
 
-  constructor(private apiService: ApiService) {}
+  constructor(private apiService: ApiService, private router : Router) {}
 
   ngOnInit(): void {
     this.getAccounts();
@@ -46,7 +47,7 @@ export class VirementComponent implements OnInit {
       (result) => {
         // Le virement a été effectué avec succès, vous pouvez traiter la réponse du serveur si nécessaire
         console.log('Virement effectué :', result);
-        alert('Virement effectué avec succès !');
+        this.router.navigate(['/virementGood']);
       },
       (error) => {
         // Gérer les erreurs en cas d'échec du virement
