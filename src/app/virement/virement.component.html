@@ -1,23 +1,27 @@
-<div class="container     mx-5">
-    <h2>Bienvenue sur le site REN BANK</h2>
+
+  
+
+  <div class="container     mx-5">
+    <h2 class="pt-4">Bienvenue sur le site REN BANK</h2>
     <form (submit)="submitVirement()" class="mx-4 ">
       <div class="form-group">
-        <label for="compteEmetteur">Comptes émetteurs</label>
+        <label class="pt-4"for="compteEmetteur">Comptes émetteurs</label>
         <select class="form-control" name="compteEmetteur" [(ngModel)]="compteEmetteur">
           <option *ngFor="let compte of comptes" [value]="compte.id">{{ compte.libelle }}</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="compteEmetteur">Comptes destinataires</label>
+        <label class="pt-4" for="compteEmetteur">Comptes destinataires</label>
         <select class="form-control" name="compteDestinataire" [(ngModel)]="compteDestinataire">
           <option *ngFor="let compte of comptes" [value]="compte.id">{{ compte.libelle }}</option>
         </select>
       </div>
       <div class="form-group">
-        <label>Montant du virement</label>
+        <label class="pt-4">Montant du virement</label>
         <input type="number" class="form-control" [(ngModel)]="montant" name="montant" />
       </div>
-      <button type="submit" class="btn btn-primary">Valider</button>
+      <div class=" d-flex justify-content-center pt-4">
+        <button type ="submit" class="main-btn">Valider</button>
+      </div>
     </form>
   </div>
-  
