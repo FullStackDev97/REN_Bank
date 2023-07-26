@@ -41,10 +41,10 @@
 
                 <form *ngIf="this.name_unique" class="form" action="">
                     <label for="depot">Montant depot</label>
-                    <input class="form-control my-2" type="text" [(ngModel)]="signUpInfos.first_name" name="depot"
+                    <input class="form-control my-2" type="number" [(ngModel)]="signUpInfos.montant" name="depot"
                         id="depot">
                     <label class="pt-2 pb-4" for="type">Account type : &nbsp;</label>
-                    <select name="type" id="type" [(ngModel)]="signUpInfos.sex">
+                    <select name="type" id="type" [(ngModel)]="signUpInfos.type">
                         <option value="courant">Compte Courant</option>
                         <option value="remuneree">Compte remunerée</option>
                         <option value="livret">Livret A</option>
@@ -52,8 +52,13 @@
                     
 
                     <div class="modal-footer d-flex justify-content-center">
-                        <button type="button"  (click)="onSignup()"  class="main-btn">Sign Up</button>
+                        <button type="button"  (click)="onSignup()" data-bs-dismiss="modal"  class="main-btn">Sign Up</button>
+                        
                     </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="" class="text-center" (click)="forward()"> retour en arriere </a>
+                    </div>
+                    
                 </form>
 
 
@@ -78,7 +83,7 @@
                     
 
                     <div class="modal-footer d-flex justify-content-center">
-                        <button type="button"  (click)="onSignup()"  class="main-btn ">Sign Up</button>
+                        <button type="button"  (click)="forward()"  class="main-btn ">Continuer</button>
                     </div>
                 </form>
             </div>

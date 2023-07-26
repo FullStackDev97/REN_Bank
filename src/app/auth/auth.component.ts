@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../services/auth_service/auth.service';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ApiService } from '../services/api_service/api.service';
 
 @Component({
   selector: 'app-auth',
@@ -15,6 +16,8 @@ export class AuthComponent {
     last_name:'',
     first_name: '',
     sex:0,
+    type : '',
+    montant : 0
   }
 
   name_unique = false;
@@ -25,7 +28,7 @@ export class AuthComponent {
     
   }
 
-  constructor(private authService : AuthService, private router: Router ) {
+  constructor(private authService : AuthService,private apiService : ApiService, private router: Router ) {
      
   }
 
@@ -36,12 +39,7 @@ export class AuthComponent {
     
   }
 
-  
-
-
-  onSignup() {
-    
-
+  forward(){
     if(this.name_unique){
       this.name_unique = false;
     }else{
@@ -50,6 +48,15 @@ export class AuthComponent {
     
 
     return this.name_unique;
+  }
+
+  
+
+
+  onSignup() {
+    
+    this.authService.signUp(this.signUpInfos);
+    this.router.navigate(['/menu']);
     
   }
 }

@@ -9,15 +9,15 @@ import { map } from 'rxjs';
 export class ApiService {
   baseurl: String = 'http://localhost:8080/api/service-banque';
   accounts: any;
-  user = JSON.parse(localStorage.getItem('user') || '{}')
+  user : any;
   transactions :any;
 
 
+  ngOnInit(): void {
+    
+  }
 
   constructor(private http: HttpClient) { 
-
-   
-
       
   }
 
@@ -33,6 +33,8 @@ export class ApiService {
 
 
   getAccounts() {
+    this.user = JSON.parse(localStorage.getItem('user') || '{}');
+    console.log(this.user);
     const params = new HttpParams()
     .set('unUtilisateurId', this.user.user_id);
     
@@ -48,4 +50,6 @@ export class ApiService {
     return this.http.post<any>(this.baseurl +"/compteHistorique",null ,{ params });
       
   }
+
+  
 }
